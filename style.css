@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.container{
+    background-color: goldenrod;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.wrapper{
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgb(97, 93, 93);
+    width: 310px;
+}
+.header input{
+border: none;
+border-bottom: 2px solid black;
+margin-right: 10px;
+padding: 5px 10px;
+outline: none;
+font-size: 14px;
+opacity: .7;
+}
+.btn{
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 3px;
+    background-color: goldenrod;
+    cursor: pointer;
+    transition: opacity .3s linear;
+}
+.btn:hover{
+    opacity: .7;
+    
+}
+.foodDetails{
+    background-color: goldenrod;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+   
+}
+.main img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin: 15px auto 0;
+    display: block;
+   
+}
+.foodDetails h2{
+    font-size: 1em;
+    text-transform: capitalize;
+}
+.foodDetails span{
+    text-transform: capitalize;
+    opacity: .5;
+    font-size: 12px;
+}
+.zutaten{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+  
+}
+.zutaten li{
+    margin: 8px 5px;
+    width: 45%;
+    font-size: 13px;
+    font-weight: 600;
+}
+.details{
+    float: right;
+}
+.zubreitung{
+    width: 310px;
+    height: 480px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 20px rgb(111, 106, 106);
+    position: fixed;
+    top: 50%;
+    left: 79%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    z-index: 999;
+}
+.zubreitung.active{
+    z-index: -1;
+    
+ 
+    transition: transform 1s linear;
+}
+.zubreitung i{
+    background-color:transparent;
+    cursor: pointer;
+    padding: 3px;
+    float: right;
+}
+.preparation{
+    font-size: 14px;
+    margin-top: 40px;
+}
+@media screen and (max-width:400px) {
+    .zubreitung{
+        left: 50%;
+    }
+}
